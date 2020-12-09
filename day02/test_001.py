@@ -33,7 +33,7 @@ def test_register_001():
 def test_register_002():
     data = {
         "mobilephone": '1234567890',
-        "pwd": '12345'
+        "pwd": '12345678'
     }
     r = requests.post(url, data=data)
     r = r.json()
