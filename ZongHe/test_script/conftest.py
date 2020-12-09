@@ -2,8 +2,6 @@
 脚本层的一些公关方法
 """
 import pytest
-from ZongHe.caw import DataRead
-from ZongHe.caw.BaseRequests import BaseRequests
 import sys, os
 
 
@@ -23,6 +21,9 @@ def get_project_path():
 
 
 sys.path.append(get_project_path())
+
+from ZongHe.caw import DataRead
+from ZongHe.caw.BaseRequests import BaseRequests
 
 
 # 从环境文件读取url
