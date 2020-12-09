@@ -4,8 +4,7 @@
 import pytest
 from ZongHe.caw import DataRead
 from ZongHe.caw.BaseRequests import BaseRequests
-import sys
-import os
+import sys, os
 
 
 def get_project_path():
