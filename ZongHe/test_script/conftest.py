@@ -4,6 +4,9 @@
 import pytest
 from ZongHe.caw import DataRead
 from ZongHe.caw.BaseRequests import BaseRequests
+import sys
+
+sys.path.append(DataRead.get_project_path())
 
 
 # 从环境文件读取url
