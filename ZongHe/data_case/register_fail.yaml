@@ -1,0 +1,22 @@
+# 注册成功的数据放register_pass.yaml
+# 注册失败的数据放register_fail.yaml
+- data: {"mobilephone": "1234567890", "pwd": "123456"}
+  expect: {"code":'20109',"data":{},"msg":"手机号码格式不正确","status":0}
+
+- data: {"mobilephone": "111111111111", "pwd": "123456"}
+  expect: {"code":'20109',"data":{},"msg":"手机号码格式不正确","status":0}
+
+- data: {"mobilephone": , "pwd": "123456"}
+  expect: {"code":'20103',"data":{},"msg":"手机号不能为空","status":0}
+
+- data: {"mobilephone": '17792930289', "pwd": "123456"}
+  expect: {"code":'20110',"data":{},"msg":"手机号码已被注册","status":0}
+
+- data: {"mobilephone": "15523451769", "pwd": "12345"}
+  expect: {"code":'20108',"data":{},"msg":"密码长度必须为6~18","status":0}
+
+- data: {"mobilephone": "15523452769", "pwd": "1234567890111111111"}
+  expect: {"code":'20108',"data":{},"msg":"密码长度必须为6~18","status":0}
+
+- data: {"mobilephone": "15112345678", "pwd": }
+  expect: {"code":'20103',"data":{},"msg":"密码不能为空","status":0}
