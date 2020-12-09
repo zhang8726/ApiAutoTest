@@ -5,8 +5,25 @@ import pytest
 from ZongHe.caw import DataRead
 from ZongHe.caw.BaseRequests import BaseRequests
 import sys
+import os
 
-sys.path.append(DataRead.get_project_path())
+
+def get_project_path():
+    """
+    获取工作路径
+    :return: 当前工作路径
+    """
+    # __file__ 存储着当前文件的路径
+    path = os.path.realpath(__file__)
+    # 上一级目录
+    path = os.path.dirname(path)
+    # 再上一级目录
+    path = os.path.dirname(path)
+    path = os.path.dirname(path)
+    return path + "\\"
+
+
+sys.path.append(get_project_path())
 
 
 # 从环境文件读取url
